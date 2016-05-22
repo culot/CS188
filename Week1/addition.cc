@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <cassert>
 #include <limits>
 
@@ -17,13 +18,13 @@ int main(void) {
   double sum;
 
   sum = add(1, 1);
-  assert(sum - 2 < std::numeric_limits<double>::epsilon());
+  assert(std::abs(sum - 2) < std::numeric_limits<double>::epsilon());
 
   sum = add(2, 3);
-  assert(sum - 5 < std::numeric_limits<double>::epsilon());
+  assert(std::abs(sum - 5) < std::numeric_limits<double>::epsilon());
 
   sum = add(10., -2.1);
-  assert(sum - 7.9 < std::numeric_limits<double>::epsilon());
+  assert(std::abs(sum - 7.9) < std::numeric_limits<double>::epsilon());
 
   return 0;
 }
