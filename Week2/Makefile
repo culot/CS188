@@ -4,7 +4,7 @@ CFLAGS=	-g -Wall -Werror -std=c++11
 BINS=	pacman
 OBJS=	$(wildcard *.o)
 
-PACMAN_SRCS=	pacman.cc move.cc
+PACMAN_SRCS=	pacman.cc pov.cc
 PACMAN_OBJS=	$(PACMAN_SRCS:.cc=.o)
 
 all:	$(BINS)
