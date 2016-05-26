@@ -1,64 +1,64 @@
 #include "pov.h"
 
 Direction Pov::turnLeft() {
-  switch (currentDirection_) {
+  switch (dir_) {
     case Direction::North:
-      currentDirection_ = Direction::West;
+      dir_ = Direction::West;
       break;
     case Direction::South:
-      currentDirection_ = Direction::East;
+      dir_ = Direction::East;
       break;
     case Direction::East:
-      currentDirection_ = Direction::North;
+      dir_ = Direction::North;
       break;
     case Direction::West:
-      currentDirection_ = Direction::South;
+      dir_ = Direction::South;
       break;
     case Direction::Stop:
-      currentDirection_ = Direction::Stop;
+      dir_ = Direction::Stop;
       break;
   }
-  return currentDirection_;
+  return dir_;
 }
 
 Direction Pov::turnRight() {
-  switch (currentDirection_) {
+  switch (dir_) {
     case Direction::North:
-      currentDirection_ = Direction::East;
+      dir_ = Direction::East;
       break;
     case Direction::South:
-      currentDirection_ = Direction::West;
+      dir_ = Direction::West;
       break;
     case Direction::East:
-      currentDirection_ = Direction::South;
+      dir_ = Direction::South;
       break;
     case Direction::West:
-      currentDirection_ = Direction::North;
+      dir_ = Direction::North;
       break;
     case Direction::Stop:
-      currentDirection_ = Direction::Stop;
+      dir_ = Direction::Stop;
       break;
   }
-  return currentDirection_;
+  return dir_;
 }
 
 Direction Pov::reverse() {
-  switch (currentDirection_) {
+  switch (dir_) {
     case Direction::North:
-      currentDirection_ = Direction::South;
+      dir_ = Direction::South;
       break;
     case Direction::South:
-      currentDirection_ = Direction::North;
+      dir_ = Direction::North;
       break;
     case Direction::East:
-      currentDirection_ = Direction::West;
+      dir_ = Direction::West;
       break;
     case Direction::West:
-      currentDirection_ = Direction::East;
+      dir_ = Direction::East;
       break;
     case Direction::Stop:
-      currentDirection_ = Direction::Stop;
+      dir_ = Direction::Stop;
       break;
   }
-  return currentDirection_;
+  return dir_;
 }
